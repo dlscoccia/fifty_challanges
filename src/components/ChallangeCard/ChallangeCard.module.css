@@ -1,0 +1,38 @@
+.cardBody {
+    background-color: #c6c6c650;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+    border: #f6f6f650 thin solid;
+    @apply w-1/4 mb-10 mt-10 rounded-xl border-2
+}
+
+.cardBody:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.image {
+    @apply p-1 rounded-xl;
+}
+
+.info {
+    @apply flex flex-col justify-center items-center;
+    font-family: 'Acme', sans-serif;
+}
+
+.id {
+    color: var(--gray);
+    @apply text-2xl mt-4;
+}
+
+.name {
+    color: var(--gray);
+    @apply text-3xl mb-4;
+}
+
+.division {
+    width: 80%;
+    height: 2px;
+    background-color: var(--yellow);
+    @apply m-4
+}

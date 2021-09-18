@@ -1,0 +1,32 @@
+.challangeContainer {
+  background-image: url('https://images.unsplash.com/photo-1579547944212-c4f4961a8dd8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1492&q=80');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @apply flex flex-col justify-center items-center min-h-screen;
+}
+
+.challanges {
+  width: 100%;
+  @apply w-full flex flex-wrap gap-2 p-2 justify-evenly items-center;
+}
+
+.search {
+  @apply flex items-center;
+}
+
+.searchText {
+  @apply text-3xl mr-4 text-yellow-300;
+}
+
+.input {
+  background-color: transparent;
+  outline: none;
+  @apply px-4 py-2 mt-10 border-b-2 border-yellow-300 w-1/2;
+}
+
+.input:focus {
+  outline: none;
+  color: var(--yellow);
+  @apply w-1/2;
+}
