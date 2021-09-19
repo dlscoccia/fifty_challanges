@@ -3,11 +3,13 @@
 @tailwind utilities;
 @tailwind screens;
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
 
 :root {
   --yellow: #D4AF37;
   --gray: #F6F6F6;
   --dark-gray: #777979;
+  --blue: #051C2C;
 }
 
 * {

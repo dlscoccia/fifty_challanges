@@ -1,19 +1,21 @@
 import Aos from 'aos';
 import React, { useEffect } from 'react';
 import Banner from './components/Banner';
-import Challanges from './components/Challanges';
+import Challenges from './components/Challenges';
 import Nav from './components/Navbar';
-import data from './data/data.json'
+import { data } from './data/data.js'
 
 function App() {
   useEffect(() => {
     Aos.init({})
   }, [])
+
+ 
   return (
     <div className="App">
       <Nav />
       <Banner />
-      <Challanges data={data} />
+      <Challenges data={data} />
     </div>
   );
 }

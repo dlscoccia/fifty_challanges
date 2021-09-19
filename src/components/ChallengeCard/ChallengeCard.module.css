@@ -12,6 +12,9 @@
 }
 
 .image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
     @apply p-1 rounded-xl;
 }
 
@@ -34,5 +37,10 @@
     width: 80%;
     height: 2px;
     background-color: var(--yellow);
-    @apply m-4
+    @apply m-4;
+}
+
+.btn {
+    background-color: #00000050;
+@apply w-1/2 text-2xl text-yellow-300 mb-4 rounded-lg;
 }
