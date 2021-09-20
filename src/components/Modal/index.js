@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
-import { useSpring, animated } from 'react-spring'
 import { MdClose } from 'react-icons/md'
 
 const Background = styled.div`
@@ -66,7 +65,6 @@ color: #141414;
 font-family: 'Acme', sans-serif;
 h1 {
 font-size: 38px;
-
 }
 
 p {
@@ -75,6 +73,8 @@ font-family: 'Raleway', sans-serif;
 font-weight: 300;
 font-style: italic;
 color: var(--blue);
+padding: 0 0.5rem;
+text-align: center;
 }
 
 button {
@@ -111,13 +111,6 @@ z-index: 10;
 const Modal = ({ showModal, setShowModal, name, description, image, git, deploy }) => {
 
   const modalRef = useRef()
-  const animation = useSpring({
-    config: {
-      duration: 250
-    },
-    opacity: showModal ? 1 : 0,
-    transform: showModal ? `translateY(0%)` : `translateY(-100%)`
-  })
 
   const closeModal = e => {
     if (modalRef.current === e.target) {
@@ -130,7 +123,6 @@ const Modal = ({ showModal, setShowModal, name, description, image, git, deploy 
       {
         showModal ? (
           <Background ref={modalRef} onClick={closeModal}>
-            <animated.div style={animation}>
               <ModalWrapper showModal={showModal}>
                 <ModalImg src={image} alt='modal' />
                 <ModalContent>
@@ -147,7 +139,6 @@ const Modal = ({ showModal, setShowModal, name, description, image, git, deploy 
                 </ModalContent>
                 <CloseModalButton aria-label='close modal' onClick={() => setShowModal(prev => !prev)} />
               </ModalWrapper>
-            </animated.div>
           </Background>
         ) : null
       }
