@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ChallengeCard from '../ChallengeCard'
 import style from './Challenges.module.css'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Challenges = ({ data }) => {
   const [challenges, setChallenges] = useState(data)
@@ -15,6 +17,10 @@ const Challenges = ({ data }) => {
     }
   }
 
+  useEffect(() => {
+    Aos.init({duration: 1000})
+  }, [])
+
   return (
     <main className={style.challengeContainer}>
       <div className='search'>
@@ -25,7 +31,7 @@ const Challenges = ({ data }) => {
         {
           challenges.length > 0 && 
           challenges.map(challenge => (
-            <ChallengeCard key={challenge.id} name={challenge.name} id={challenge.id} img={challenge.image} git={challenge.githubUrl} deploy={challenge.deployUrl} description={challenge.description} />
+            <ChallengeCard data-aos="zoom-out" key={challenge.id} name={challenge.name} id={challenge.id} img={challenge.image} git={challenge.githubUrl} deploy={challenge.deployUrl} description={challenge.description} />
           ))
         }
       </div>
