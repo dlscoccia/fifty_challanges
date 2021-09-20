@@ -209,8 +209,8 @@ export const data = [
   "id": "24",
   "image": image24,
   "description": "UI to give a feedback with smiling faces.",
-  "deployUrl": "https://github.com/dlscoccia/50challanges/tree/main/challanges/24_Feedback",
-  "githubUrl": "https://50challanges.vercel.app/challanges/24_Feedback/index.html"
+  "githubUrl": "https://github.com/dlscoccia/50challanges/tree/main/challanges/24_Feedback",
+  "deployUrl": "https://50challanges.vercel.app/challanges/24_Feedback/index.html"
 },
 {
   "name": "Github Profile",
